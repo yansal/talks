@@ -1,9 +1,69 @@
 Projects
 
 Yann Salaün
-Software Developer 
+Software Developer
 yannsalaun1@gmail.com
 https://yansal.github.io/
 @yannsalaun1
 
-* First slide
+* VVCTube
+
+* Background
+
+Protoype developed at Audionamix
+
+Audionamix is an R&D company specialized in audio source separation
+
+VVC means Vocal Volume Control, Tube is for YouTube
+
+* What it does
+
+Take a YouTube video
+
+Separate vocals and audio background
+
+Return a web media player with 3 tracks (1 video + 2 audio) and volume control over vocals and background
+
+* How it works
+
+Written in Go
+
+[[https://rg3.github.io/youtube-dl/][youtube-dl]] to download videos
+
+[[https://www.ffmpeg.org/][ffmpeg]] for preprocessing and transcoding
+
+Research jobs through Audionamix HTTP API
+
+Redis, S3 for storage
+
+Websocket for streaming progress to user
+
+Deployed on EC2 with Docker
+
+* Demo (~2min)
+
+[[https://vvctube.audionamix.com]]
+
+* Discussion
+
+Today, access to external services is required for local development (Redis, S3)
+
+It would be great to abstract it through `storage` and `kvstore` interfaces
+
+* Pollbc
+
+* What it does
+
+Poll leboncoin.fr for a given search
+
+Alert when a new interesting announce is published
+
+* How it works
+
+Written in Go
+
+Almost stdlib-only (except database driver and HTML parser)
+
+Database is PostgreSQL
+
+Deployed on Heroku
