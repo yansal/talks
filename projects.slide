@@ -56,7 +56,7 @@ It would be great to abstract it through `storage` and `kvstore` interfaces
 
 Poll leboncoin.fr for a given search
 
-Alert when a new interesting announce is published
+Alert when a new announce is published
 
 * How it works
 
@@ -67,3 +67,7 @@ Almost stdlib-only (except database driver and HTML parser)
 Database is PostgreSQL
 
 Deployed on Heroku
+
+* Code
+
+[[https://github.com/yansal/pollbc]]
